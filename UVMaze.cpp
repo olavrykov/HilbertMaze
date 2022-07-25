@@ -59,19 +59,19 @@ Quadrant UVMaze::GetQuadrant(Point p, int d)
     UVPoint t;
     UVPoint r = FromDecart(p);
     if (r.u > 0 && r.v > 0) {
-        q.drection = Direction_NE;
+        q.direction = Direction_NE;
         t = UVPoint(d, d);
     }
     else if (r.u > 0 && r.v < 0) {
-        q.drection = Direction_SE;
+        q.direction = Direction_SE;
         t = UVPoint(d, -d);
     }
     else if (r.u < 0 && r.v < 0) {
-        q.drection = Direction_SW;
+        q.direction = Direction_SW;
         t = UVPoint(-d, -d);
     }
     else if (r.u < 0 && r.v > 0) {
-        q.drection = Direction_NW;
+        q.direction = Direction_NW;
         t = UVPoint(-d, d);
     }
     q.p = ToDecart(t);
@@ -123,13 +123,14 @@ int UVMaze::GetAroundDistance(Point p1, Point p2)
     int x2 = PerimeterCoord(d * 2 + 1, p2);
     if (x1 == x2)
         return 0;
-
+    else
     if (x1 < x2)
         return min(x2 - x1, x1 + 4 * d * 2 - x2);
-
+    else
     if (x2 < x1)
         return min(x1 - x2, x2 + 4 * d * 2 - x1);
-
+    else
+        return 0; // unreachable 
 }
 
 Point UVMaze::GetOutOf(Point p)
@@ -146,7 +147,7 @@ Point UVMaze::GetOutOf(Point p)
         t.v = t.v > 1 ? d : -d;
     }
     else 
-        throw std::runtime_error("umaze error");
+        throw std::runtime_error("UVMaze error");
 
     return ToDecart(t);
 }
@@ -169,13 +170,13 @@ int UVMaze::GetOutCost(Point p)
             result = d + t.v + abs(t.u);
     }
     else
-        throw std::runtime_error("umaze error");
+        throw std::runtime_error("UVMaze error");
     
     return result;
 }
 
 
-const int UVMaze::matrix[4][2][2] = { // _back
+const int UVMaze::matrix[4][2][2] = {
     { { 1, 0}, 
       { 0, 1} },
 

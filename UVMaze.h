@@ -8,13 +8,6 @@ struct Point
 	int y=0;
 	Point() {}
 	Point(int x, int y) : x(x), y(y) {}
-public:
-	//string ToString()
-	//{
-	//	ostringstream oss;
-	//	oss << "x "<< x << " y " << y;
-	//	return oss.str();
-	//}
 };
 
 struct UVPoint
@@ -32,7 +25,7 @@ enum Direction {
 
 struct Quadrant
 {
-	Direction drection;
+	Direction direction{ Direction_UNKNOWN };
 	Point p;
 };
 
@@ -56,15 +49,5 @@ public:
 	Quadrant GetQuadrant(Point p, int d);
 	int AddRotation(int v);
 private:
-//	int rotation; // 0 N, 1 E, 2 S, 3 W
 	static const int matrix[4][2][2];
 };
-/*
-const int UVMaze::matrix[4][2][2] = {
-	{ {0,1}, {2,3} },
-	{ {1,1}, {1,1} },
-	{ {0,1}, {2,3} },
-	{ {1,1}, {1,1} }
-};
-*/
-//int main();

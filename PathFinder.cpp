@@ -51,8 +51,8 @@ void PathFinder::Build(Point p, vector<UVMaze*>& v)
 			break;
 
 		Quadrant q = m->GetQuadrant(p, d);
-		//cout << "Direction " << q.drection << " c " << q.p.x << " " << q.p.y << endl;
-		switch (q.drection)
+		//cout << "Direction " << q.direction << " c " << q.p.x << " " << q.p.y << endl;
+		switch (q.direction)
 		{
 		case Direction_NE:
 			rotation = m->AddRotation(0);
