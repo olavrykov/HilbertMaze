@@ -1,6 +1,14 @@
 #include <iostream>
-#include "UVMaze.h"
+//#include "UVMaze.h"
 #include "PathFinder.h"
+
+void CheckResult(int v1, int v2) 
+{
+    if (v1 == v2)
+        cout << "OK" << endl << endl;
+    else
+        cout << "ERROR, got " << v1 << " expected " << v2 << endl << endl;
+}
 
 int main()
 {
