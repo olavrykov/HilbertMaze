@@ -10,6 +10,15 @@ void CheckResult(int v1, int v2)
         cout << "ERROR, got " << v1 << " expected " << v2 << endl << endl;
 }
 
+int solution(int N, int A, int B, int C, int D) {
+    PathFinder pf;
+    pf.rang = N;
+    pf.p1 = Point(2, 1);
+    pf.p2 = Point(3, 4);
+    pf.Resolve();
+    return pf.result;
+}
+
 int main()
 {
     std::cout << "Hilbert Maze Route\n\n";

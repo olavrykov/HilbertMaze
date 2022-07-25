@@ -74,8 +74,8 @@ void PathFinder::Build(Point p, vector<UVMaze*>& v)
 
 void PathFinder::Find()
 {
-	int i1 = v1.size() - 1;
-	int i2 = v2.size() - 1;
+	int i1 = (int)v1.size() - 1;
+	int i2 = (int)v2.size() - 1;
 	Point t1 = p1;
 	Point t2 = p2;
 	result = 0;

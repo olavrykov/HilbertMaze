@@ -67,4 +67,4 @@ const int UVMaze::matrix[4][2][2] = {
 	{ {1,1}, {1,1} }
 };
 */
-int main();
+//int main();

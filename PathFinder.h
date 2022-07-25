@@ -7,10 +7,10 @@ using namespace std;
 class PathFinder
 {
 public:
-	Point p1;
-	Point p2;
-	int rang;
-	int result;
+	Point p1{ 0,0 };
+	Point p2{ 0,0 };
+	int rang { 1 };
+	int result{ -1 };
 
 	PathFinder() {}
 	void Resolve();

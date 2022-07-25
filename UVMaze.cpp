@@ -1,63 +1,6 @@
-// UVMaze.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
 #include "UVMaze.h"
-#include "PathFinder.h"
 
 using namespace std;
-
-/*
-void CheckResult(int v1, int v2) 
-{
-    if (v1 == v2)
-        cout << "OK" << endl << endl;
-    else
-        cout << "ERROR, got " << v1 << " expected " << v2 << endl << endl;
-}
-*/
-
-int solution(int N, int A, int B, int C, int D) {
-    PathFinder pf;
-    pf.rang = N;
-    pf.p1 = Point(2, 1);
-    pf.p2 = Point(3, 4);
-    pf.Resolve();
-    return pf.result;
-}
-
-/*
-int main()
-{
-    std::cout << "Hilbert Maze Route\n\n";
-
-    PathFinder pf;
-
-    std::cout << "Solution " << pf.rang << " p1 " << pf.p1.x << " " << pf.p1.y << " p2 " << pf.p2.x << " " << pf.p2.y << endl;
-    pf.rang = 1;
-    pf.p1 = Point(2, 1);
-    pf.p2 = Point(3, 4);
-    pf.Resolve();
-    std::cout << "Result " << pf.result << endl;
-    CheckResult(pf.result, 8);
-
-    std::cout << "Solution " << pf.rang << " p1 " << pf.p1.x << " " << pf.p1.y << " p2 " << pf.p2.x << " " << pf.p2.y << endl;
-    pf.rang = 2;
-    pf.p1 = Point(2, 5);
-    pf.p2 = Point(6, 6);
-    pf.Resolve();
-    std::cout << "Result " << pf.result << endl;
-    CheckResult(pf.result, 7);
-
-    pf.rang = 3; 
-    pf.p1 = Point(6, 6);
-    pf.p2 = Point(10, 13);
-    std::cout << "Solution " << pf.rang << " p1 " << pf.p1.x << " " << pf.p1.y << " p2 " << pf.p2.x << " " << pf.p2.y << endl;
-    pf.Resolve();
-    std::cout << "Result " << pf.result << endl;
-    CheckResult(pf.result, 39);
-}
-*/
 
 UVPoint UVMaze::FromDecart(Point p)
 {
@@ -245,18 +188,3 @@ const int UVMaze::matrix[4][2][2] = { // _back
     { { 0 ,1}, 
       {-1, 0} }
 };
-/*
-const int UVMaze::matrix[4][2][2] = {
-    { { 1, 0},
-      { 0, 1} },
-
-    { { 0 ,1},
-      {-1, 0} },
-
-    { {-1, 0},
-      { 0,-1} },
-
-    { { 0,-1},
-      { 1 ,0} }
-};
-*/
