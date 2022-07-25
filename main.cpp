@@ -1,5 +1,4 @@
 #include <iostream>
-//#include "UVMaze.h"
 #include "PathFinder.h"
 
 void CheckResult(int v1, int v2) 
