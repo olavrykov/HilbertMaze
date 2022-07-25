@@ -7,6 +7,7 @@
 
 using namespace std;
 
+/*
 void CheckResult(int v1, int v2) 
 {
     if (v1 == v2)
@@ -14,6 +15,7 @@ void CheckResult(int v1, int v2)
     else
         cout << "ERROR, got " << v1 << " expected " << v2 << endl << endl;
 }
+*/
 
 int solution(int N, int A, int B, int C, int D) {
     PathFinder pf;
@@ -24,6 +26,7 @@ int solution(int N, int A, int B, int C, int D) {
     return pf.result;
 }
 
+/*
 int main()
 {
     std::cout << "Hilbert Maze Route\n\n";
@@ -54,6 +57,7 @@ int main()
     std::cout << "Result " << pf.result << endl;
     CheckResult(pf.result, 39);
 }
+*/
 
 UVPoint UVMaze::FromDecart(Point p)
 {
