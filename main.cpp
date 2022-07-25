@@ -10,6 +10,7 @@ void CheckResult(int v1, int v2)
         cout << "ERROR, got " << v1 << " expected " << v2 << endl << endl;
 }
 
+// the entry is for Codility testing 
 int solution(int N, int A, int B, int C, int D) {
     PathFinder pf;
     pf.rang = N;
@@ -19,6 +20,7 @@ int solution(int N, int A, int B, int C, int D) {
     return pf.result;
 }
 
+// local testing
 int main()
 {
     std::cout << "Hilbert Maze Route\n\n";
