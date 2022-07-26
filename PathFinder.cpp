@@ -74,14 +74,15 @@ void PathFinder::Build(Point p, vector<UVMaze*>& v)
 
 void PathFinder::Find()
 {
-	int i1 = (int)v1.size() - 1;
-	int i2 = (int)v2.size() - 1;
-	Point t1 = p1;
-	Point t2 = p2;
-	result = 0;
+	this->result = 0;
+
+	cout << "Find " << endl;
+	Point t1 = this->p1;
+	Point t2 = this->p2;
 	int cost1 = 0;
 	int cost2 = 0;
-	cout << "Find " << endl;
+	int i1 = (int) v1.size() - 1;
+	int i2 = (int) v2.size() - 1;
 	while (i1 >= 0 && i2 >= 0)
 	{
 		cout << " t1 " << t1.x << " " << t1.y << " t2 " << t2.x << " " << t2.y << endl;
@@ -104,7 +105,7 @@ void PathFinder::Find()
 		if (m1.cx == m2.cx && m1.cy == m2.cy) {
 			int d12 = 0;
 			if (m1.GetDistance(t1, t2, &d12)) {
-				result = cost1 + cost2 + d12;
+				this->result = cost1 + cost2 + d12;
 				break;
 			}
 		}
@@ -118,8 +119,8 @@ void PathFinder::Find()
 	}
 
 	// not in maze
-	if (result == 0) {
+	if (this->result == 0) {
 		int d12 = v1[0]->GetAroundDistance(t1, t2);
-		result = cost1 + cost2 + d12;
+		this->result = cost1 + cost2 + d12;
 	}
 }
