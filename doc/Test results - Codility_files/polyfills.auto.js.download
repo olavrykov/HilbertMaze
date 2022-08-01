@@ -1,0 +1,1 @@
+["/static/js/2973e760657d684510f3.5835.js","/static/js/eec60d255e4b1d0a4fc9.common-polyfills.js"].forEach((e=>{const c=document.createElement("script");c.src=e,document.head.appendChild(c)}));

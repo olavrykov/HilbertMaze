@@ -1,0 +1,1 @@
+["/static/css/532d32092ebcbc475fdd.base-inner.css"].forEach((e=>{const a=document.createElement("link");a.href=e,a.rel="stylesheet",document.head.appendChild(a)}));
