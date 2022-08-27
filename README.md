@@ -2,4 +2,4 @@
 
 Codility problems
 
-# https://app.codility.com/demo/results/trainingVRNXKX-RP9/
+https://app.codility.com/demo/results/trainingVRNXKX-RP9/
